@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Jost } from 'next/font/google';
+import { Lenis } from 'lenis/react';
 
 import Navbar from '@/shared/navbar';
 import Footer from '@/shared/footer';
@@ -29,11 +30,13 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body className={`${jost.variable} antialiased`}>
-				<Navbar />
-				<main>{children}</main>
-				<Footer />
-			</body>
+			<Lenis root>
+				<body className={`${jost.variable} antialiased`}>
+					<Navbar />
+					<main>{children}</main>
+					<Footer />
+				</body>
+			</Lenis>
 		</html>
 	);
 }
