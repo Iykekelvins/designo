@@ -26,6 +26,7 @@
 
 html {
 	font-size: calc(100vw / 1440 * 16);
+	scrollbar-width: none;
 	@media screen and (max-width: 1024px) {
 		font-size: calc(100vw / 1024 * 16);
 	}
@@ -37,7 +38,6 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-	scrollbar-width: none;
 }
 
 main {
