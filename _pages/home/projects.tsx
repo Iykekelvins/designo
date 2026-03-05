@@ -9,7 +9,7 @@ export default function Projects() {
 					className='relative w-full h-[max(250px,15.625rem)] sm:h-[max(200px,12.5rem)] des:h-160 
         rounded-[max(0.938rem,15px)] overflow-hidden'>
 					<Image
-						src='/images/web-design.webp'
+						src='/images/home/web-design.webp'
 						sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
 						fill
 						alt='web design card'
@@ -49,7 +49,7 @@ export default function Projects() {
 						className='relative w-full h-[max(250px,15.625rem)] sm:h-[max(200px,12.5rem)] des:h-full 
           rounded-[max(0.938rem,15px)] overflow-hidden'>
 						<Image
-							src='/images/app-design.webp'
+							src='/images/home/app-design.webp'
 							sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
 							fill
 							alt='app design card'
@@ -88,7 +88,7 @@ export default function Projects() {
 						className='relative w-full h-[max(250px,15.625rem)] sm:h-[max(200px,12.5rem)] des:h-full 
           rounded-[max(0.938rem,15px)] overflow-hidden'>
 						<Image
-							src='/images/graphic-design.webp'
+							src='/images/home/graphic-design.webp'
 							fill
 							alt='graphic design card'
 							className='object-cover'

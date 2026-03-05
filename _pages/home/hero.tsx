@@ -33,7 +33,7 @@ export default function Hero() {
 				</div>
 				<figure>
 					<Image
-						src='/images/iphone.webp'
+						src='/images/home/iphone.webp'
 						width={284}
 						height={500}
 						alt='iphone mockup'
