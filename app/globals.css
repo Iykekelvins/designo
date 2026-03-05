@@ -27,6 +27,7 @@
 html {
 	font-size: calc(100vw / 1440 * 16);
 	scrollbar-width: none;
+	overflow-x: hidden;
 	@media screen and (max-width: 1024px) {
 		font-size: calc(100vw / 1024 * 16);
 	}

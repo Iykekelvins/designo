@@ -20,7 +20,7 @@ const features = [
 
 export default function Features() {
 	return (
-		<section className='pt-[max(10rem,120px)]'>
+		<section className='pt-[max(10rem,120px)] relative'>
 			<ul
 				className='grid des:grid-cols-3 gap-x-[max(1.875rem,30px)]
         gap-y-[max(2rem,32px)]
@@ -46,6 +46,20 @@ export default function Features() {
 					</li>
 				))}
 			</ul>
+
+			<svg
+				width='1006'
+				height='594'
+				viewBox='0 0 1006 594'
+				fill='none'
+				xmlns='http://www.w3.org/2000/svg'
+				className='absolute -bottom-72 -right-48 w-251.5 h-148.5 hidden des:block z-[-1]'>
+				<path
+					opacity='0.502255'
+					d='M1006 297C1006 461.029 873.029 594 709 594H297C132.971 594 0 461.029 0 297C0 132.971 132.971 0 297 0H1006V297Z'
+					fill='#F1F3F5'
+				/>
+			</svg>
 		</section>
 	);
 }
