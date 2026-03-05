@@ -1,24 +1,10 @@
 'use client';
 
 import { useEffect } from 'react';
+import { NAVLINKS } from '@/lib/mock';
 
 import Image from 'next/image';
 import Link from 'next/link';
-
-const NAVLINKS = [
-	{
-		name: 'Our Company',
-		href: '/our-company',
-	},
-	{
-		name: 'Locations',
-		href: '/locations',
-	},
-	{
-		name: 'Contact',
-		href: '/contact',
-	},
-];
 
 export default function Navbar() {
 	useEffect(() => {

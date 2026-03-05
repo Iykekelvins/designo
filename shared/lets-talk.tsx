@@ -12,10 +12,10 @@ export default function LetsTalk() {
 
 	return (
 		<div
-			className='mt-[max(10rem,120px)] rounded-15 bg-peach
+			className='mt-[max(10rem,96px)] rounded-15 bg-peach
       px-[max(6rem,24px)] py-[max(4.5rem,64px)] 
       bg-[url(/images/lets-talk-bg.png)] bg-no-repeat bg-cover
-      bg-right
+      sm:bg-right relative z-2 bg-center
       '>
 			<div
 				className='flex items-center justify-between gap-[max(2rem,32px)]
