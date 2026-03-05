@@ -3,6 +3,7 @@ import { Jost } from 'next/font/google';
 import { Lenis } from 'lenis/react';
 
 import Navbar from '@/shared/navbar';
+import LetsTalk from '@/shared/lets-talk';
 import Footer from '@/shared/footer';
 
 import './globals.css';
@@ -33,7 +34,10 @@ export default function RootLayout({
 			<Lenis root>
 				<body className={`${jost.variable} antialiased`}>
 					<Navbar />
-					<main className='ac'>{children}</main>
+					<main className='ac'>
+						{children}
+						<LetsTalk />
+					</main>
 					<Footer />
 				</body>
 			</Lenis>

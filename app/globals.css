@@ -22,6 +22,7 @@
 	--text-14: max(0.875rem, 13px);
 	--breakpoint-des: 75rem;
 	--spacing-gutter: max(1.5rem, 24px);
+	--radius-15: max(15px, 0.938rem);
 }
 
 html {
