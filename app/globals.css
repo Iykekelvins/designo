@@ -26,6 +26,9 @@
 
 html {
 	font-size: calc(100vw / 1440 * 16);
+	@media screen and (max-width: 1024px) {
+		font-size: calc(100vw / 1024 * 16);
+	}
 }
 
 body {
@@ -41,9 +44,12 @@ main {
 	flex-grow: 1;
 }
 
+button {
+	@apply cursor-pointer;
+}
+
 .ac {
-	@apply px-gutter;
-	max-width: max(69.375rem, 689px);
+	@apply px-gutter des:max-w-[max(69.375rem,689px)];
 	width: 100%;
 	margin-inline: auto;
 }

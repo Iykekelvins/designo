@@ -33,7 +33,7 @@ export default function RootLayout({
 			<Lenis root>
 				<body className={`${jost.variable} antialiased`}>
 					<Navbar />
-					<main>{children}</main>
+					<main className='ac'>{children}</main>
 					<Footer />
 				</body>
 			</Lenis>

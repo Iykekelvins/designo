@@ -1,5 +1,7 @@
 'use client';
 
+import { useEffect } from 'react';
+
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -19,8 +21,30 @@ const NAVLINKS = [
 ];
 
 export default function Navbar() {
+	useEffect(() => {
+		const handleScroll = () => {
+			const nav = document.querySelector('.nav-header');
+			if (window.scrollY > 10) {
+				nav?.classList.add('!py-[max(2.188rem,20px)]');
+				nav?.classList.add('shadow-lg');
+			} else {
+				nav?.classList.remove('!py-[max(2.188rem,20px)]');
+				nav?.classList.remove('shadow-lg');
+			}
+		};
+
+		window.addEventListener('scroll', handleScroll);
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, []);
+
 	return (
-		<header className='sticky top-0 z-20 bg-white py-[max(4rem,35px)]'>
+		<header
+			className='sticky top-0 z-20 bg-white py-[max(4rem,35px)] nav-header
+		transition-all duration-500 ease-in-out
+		'>
 			<nav>
 				<div className='ac'>
 					<div className='flex items-center justify-between'>
