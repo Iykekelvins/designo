@@ -7,7 +7,7 @@ export default function Projects() {
 			<div className='grid des:grid-cols-2 gap-[max(1.875rem,24px)]'>
 				<figure
 					className='relative w-full h-[max(250px,15.625rem)] sm:h-[max(200px,12.5rem)] des:h-160 
-        rounded-[max(0.938rem,15px)] overflow-hidden'>
+        	rounded-15 overflow-hidden'>
 					<Image
 						src='/images/home/web-design.webp'
 						sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
@@ -18,10 +18,10 @@ export default function Projects() {
 					<Link
 						href='/projects/web-design'
 						className='h-full w-full flex flex-col items-center
-          justify-center absolute top-0 left-0 z-2 text-white
-          hover:bg-peach/80 overflow-hidden transition-all duration-500 
-          ease-in-out
-          '>
+          	justify-center absolute top-0 left-0 z-2 text-white
+          	hover:bg-peach/80 overflow-hidden transition-all duration-500 
+          	ease-in-out
+          	'>
 						<h2 className='text-40 font-medium'>WEB DESIGN</h2>
 						<span
 							className='flex items-center gap-[max(1.25rem,20px)]
@@ -47,7 +47,7 @@ export default function Projects() {
 				<div className='gap-gutter grid'>
 					<figure
 						className='relative w-full h-[max(250px,15.625rem)] sm:h-[max(200px,12.5rem)] des:h-full 
-          rounded-[max(0.938rem,15px)] overflow-hidden'>
+          	rounded-15 overflow-hidden'>
 						<Image
 							src='/images/home/app-design.webp'
 							sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
@@ -58,10 +58,10 @@ export default function Projects() {
 						<Link
 							href='/projects/app-design'
 							className='h-full w-full flex flex-col items-center
-          justify-center absolute top-0 left-0 z-2 text-white
-          hover:bg-peach/80 overflow-hidden transition-all duration-500 
-          ease-in-out
-          '>
+          		justify-center absolute top-0 left-0 z-2 text-white
+          		hover:bg-peach/80 overflow-hidden transition-all duration-500 
+          		ease-in-out
+          		'>
 							<h2 className='text-40 font-medium'>APP DESIGN</h2>
 							<span
 								className='flex items-center gap-[max(1.25rem,20px)]
@@ -86,7 +86,7 @@ export default function Projects() {
 					</figure>
 					<figure
 						className='relative w-full h-[max(250px,15.625rem)] sm:h-[max(200px,12.5rem)] des:h-full 
-          rounded-[max(0.938rem,15px)] overflow-hidden'>
+          	rounded-15 overflow-hidden'>
 						<Image
 							src='/images/home/graphic-design.webp'
 							fill
@@ -96,15 +96,15 @@ export default function Projects() {
 						<Link
 							href='/projects/graphic-design'
 							className='h-full w-full flex flex-col items-center
-          justify-center absolute top-0 left-0 z-2 text-white
-          hover:bg-peach/80 overflow-hidden transition-all duration-500 
-          ease-in-out
-          '>
+          		justify-center absolute top-0 left-0 z-2 text-white
+          		hover:bg-peach/80 overflow-hidden transition-all duration-500 
+          		ease-in-out
+          		'>
 							<h2 className='text-40 font-medium uppercase'>graphic DESIGN</h2>
 							<span
 								className='flex items-center gap-[max(1.25rem,20px)]
-            mt-[max(1.5rem,12px)] font-medium text-15 tracking-[5px]
-            '>
+            		mt-[max(1.5rem,12px)] font-medium text-15 tracking-[5px]
+            		'>
 								VIEW PROJECTS{' '}
 								<svg
 									width='5'
