@@ -40,6 +40,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
+	line-height: 1;
 }
 
 main {
@@ -51,7 +52,7 @@ button {
 }
 
 .ac {
-	@apply px-gutter des:max-w-[max(69.375rem,689px)];
+	@apply px-gutter des:max-w-[max(72.375rem,689px)];
 	width: 100%;
 	margin-inline: auto;
 }
