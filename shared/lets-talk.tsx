@@ -13,9 +13,10 @@ export default function LetsTalk() {
 	return (
 		<div
 			className='mt-[max(10rem,96px)] rounded-15 bg-peach
+      sm:bg-right relative z-2 bg-center bg-no-repeat bg-cover 
       px-[max(6rem,24px)] py-[max(4.5rem,64px)] 
-      bg-[url(/images/lets-talk-bg.png)] bg-no-repeat bg-cover
-      sm:bg-right relative z-2 bg-center
+      bg-[url(/images/lets-talk-bg-mobile.png)]
+			sm:bg-[url(/images/lets-talk-bg.png)]
       '>
 			<div
 				className='flex items-center justify-between gap-[max(2rem,32px)]
