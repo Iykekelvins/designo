@@ -2,10 +2,7 @@ import Image from 'next/image';
 
 export default function Hero() {
 	return (
-		<section
-			className='bg-peach rounded-15 overflow-hidden
-		
-		'>
+		<section className='bg-peach sm:rounded-15 overflow-hidden -mx-gutter sm:mx-0'>
 			<div className='flex flex-col-reverse des:flex-row justify-between'>
 				<div
 					className='flex flex-col justify-center flex-1 
