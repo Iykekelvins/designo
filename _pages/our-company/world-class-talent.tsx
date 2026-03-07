@@ -19,7 +19,7 @@ export default function WorldClassTalent() {
 						width={476}
 						height={320}
 						alt='woman with her back turned to the camera'
-						className='object-cover w-full max-sm:hidden'
+						className='object-cover w-full max-sm:hidden des:hidden'
 					/>
 					<Image
 						src='/images/about/image-world-class-talent-mobile.webp'
@@ -39,7 +39,8 @@ export default function WorldClassTalent() {
 						<h2 className='text-peach text-40 font-medium'>World-class talent</h2>
 						<p
 							className='pt-[max(1.5rem,20px)] text-16 leading-[1.6]
-              max-w-[max(27.813rem,445px)]
+              max-w-[max(27.813rem,445px)] sm:max-w-[max(572px)]
+							des:max-w-[max(27.813rem,445px)]
               '>
 							We are a crew of strategists, problem-solvers, and technologists. Every
 							design is thoughtfully crafted from concept to launch, ensuring success
