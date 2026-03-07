@@ -8,7 +8,7 @@ export default function Footer() {
 	return (
 		<footer
 			className='bg-black sm:pt-[max(9rem,144px)] sm:-mt-[max(4rem,64px)] 
-			 pb-[max(4.5rem,72px)] -mt-[max(6rem,96px)] pt-[max(153px)]'>
+			 pb-[max(4.5rem,72px)] -mt-[max(11.375rem,182px)] pt-[max(15.625rem,250px)]'>
 			<div className='ac'>
 				<div
 					className='flex items-center justify-between
