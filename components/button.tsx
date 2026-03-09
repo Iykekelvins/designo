@@ -2,12 +2,14 @@ interface ButtonProps {
 	children: React.ReactNode;
 	onClick?: () => void;
 	variant?: 'primary' | 'secondary';
+	className?: string;
 }
 
 export default function Button({
 	children,
 	onClick,
 	variant = 'primary',
+	className,
 }: ButtonProps) {
 	return (
 		<button
@@ -19,7 +21,9 @@ export default function Button({
 				variant === 'primary'
 					? 'bg-peach text-white hover:bg-light-peach'
 					: 'bg-white text-dark-grey hover:bg-light-peach hover:text-white'
-			}`}>
+			}
+			${className && className}
+			`}>
 			{children}
 		</button>
 	);
