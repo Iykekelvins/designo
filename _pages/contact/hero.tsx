@@ -12,7 +12,7 @@ export default function Hero() {
 			gap-[max(2.5rem,40px)] des:gap-0 flex-col des:flex-row
 			sm:items-start des:items-center
 			'>
-				<div className='text-white text-center sm:text-left'>
+				<div className='text-white text-center sm:text-left relative z-2'>
 					<h1 className='text-48 font-medium'>Contact Us</h1>
 					<p
 						className='text-16 leading-[1.6] mt-[max(2rem,24px)]
@@ -33,7 +33,7 @@ export default function Hero() {
 				fill='none'
 				xmlns='http://www.w3.org/2000/svg'
 				className='absolute des:left-0 size-[max(40rem,640px)] des:-bottom-20
-				-left-40 -top-20 hidden sm:block
+				-left-40 -top-20 hidden sm:block pointer-events-none
 				'>
 				<circle
 					opacity='0.308943'
@@ -62,7 +62,7 @@ export default function Hero() {
 				viewBox='0 0 200 292'
 				fill='none'
 				xmlns='http://www.w3.org/2000/svg'
-				className='absolute top-0 left-0'>
+				className='absolute top-0 left-0 sm:hidden pointer-events-none'>
 				<circle
 					opacity='0.308943'
 					cx='54'
@@ -90,7 +90,7 @@ export default function Hero() {
 				viewBox='0 0 175 292'
 				fill='none'
 				xmlns='http://www.w3.org/2000/svg'
-				className='absolute top-0 right-0'>
+				className='absolute top-0 right-0 sm:hidden pointer-events-none'>
 				<circle
 					opacity='0.308943'
 					cx='146'
