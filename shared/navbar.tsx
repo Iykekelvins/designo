@@ -33,12 +33,14 @@ export default function Navbar() {
 		<>
 			<header
 				className='sticky top-0 z-20 bg-white py-[max(4rem,35px)] nav-header
-		transition-all duration-500 ease-in-out
-		'>
+				transition-all duration-500 ease-in-out
+				'>
 				<nav>
 					<div className='ac'>
 						<div className='flex items-center justify-between'>
-							<Link href='/'>
+							<Link href='/'
+							onClick={()=>setOpenMenu(false)}
+							>
 								<Image
 									src='/nav-logo.svg'
 									alt='Designo Logo'
