@@ -62,12 +62,12 @@ export default function Navbar() {
 								className='sm:hidden grid gap-[max(4px,0.25rem)]'
 								onClick={() => setOpenMenu(!openMenu)}>
 								<span
-									className='w-[max(24px,1.5rem)] min-h-[max(4px,0.25rem)] bg-[#1D1C1E] inline-block'
+									className='w-gutter min-h-[max(4px,0.25rem)] bg-[#1D1C1E] inline-block'
 									data-selector='line-1'
 								/>
 
 								<span
-									className='w-[max(24px,1.5rem)] min-h-[max(4px,0.25rem)] bg-[#1D1C1E] inline-block'
+									className='w-gutter min-h-[max(4px,0.25rem)] bg-[#1D1C1E] inline-block'
 									data-selector='line-2'
 								/>
 							</button>
