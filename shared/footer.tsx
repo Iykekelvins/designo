@@ -12,9 +12,14 @@ export default function Footer() {
 
 	return (
 		<footer
-			className={`bg-black pt-[max(9rem,64px)]  
+			className={`bg-black  
 			 pb-[max(4.5rem,72px)]
-			 ${pathname !== '/contact' ? 'sm:-mt-[max(4rem,64px)] -mt-[max(11.375rem,182px)]' : ''}
+			 ${
+					pathname !== '/contact'
+						? `sm:-mt-[max(4rem,64px)] -mt-[max(11.375rem,182px)] 
+						pt-[max(240px)]  sm:pt-[max(8rem,128px)]`
+						: 'pt-[max(9rem,64px)]'
+				}
 			 `}>
 			<div className='ac'>
 				<div
