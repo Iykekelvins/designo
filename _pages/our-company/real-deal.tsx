@@ -11,7 +11,7 @@ export default function RealDeal() {
         py-[max(80px,5rem)] sm:py-[max(4.25rem,68px)] des:py-0
         text-center des:text-left px-gutter sm:px-0
         '>
-					<div>
+					<div className='relative z-2'>
 						<h2 className='text-peach text-40 font-medium'>The real deal</h2>
 						<p
 							className='pt-[max(1.5rem,20px)] text-16 leading-[1.6]
@@ -99,7 +99,7 @@ export default function RealDeal() {
 					</svg>
 				</div>
 
-				<figure>
+				<figure className='relative z-2'>
 					<Image
 						src='/images/about/image-real-deal.webp'
 						width={476}

@@ -31,7 +31,7 @@ export default function Hero() {
 						<Button variant='secondary'>Learn More</Button>
 					</Link>
 				</div>
-				<figure>
+				<figure className='relative z-2'>
 					<Image
 						src='/images/home/iphone.webp'
 						width={284}

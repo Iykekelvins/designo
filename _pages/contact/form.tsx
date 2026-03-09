@@ -41,7 +41,7 @@ export default function Form() {
 
 	return (
 		<form
-			className='des:max-w-95 w-full space-y-[max(1.5625rem,25px)]'
+			className='des:max-w-95 w-full space-y-[max(1.5625rem,25px)] relative z-2'
 			onSubmit={handleSubmit}>
 			<Input
 				value={payload.name}

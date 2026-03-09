@@ -6,7 +6,7 @@ export default function WorldClassTalent() {
 			<div
 				className='flex justify-between bg-[#FDF3F0] sm:rounded-15 
         overflow-hidden flex-col des:flex-row'>
-				<figure>
+				<figure className='relative z-2'>
 					<Image
 						src='/images/about/image-world-class-talent.webp'
 						width={476}
@@ -35,7 +35,7 @@ export default function WorldClassTalent() {
         py-[max(80px,5rem)] sm:py-[max(4.25rem,68px)] des:py-0
         text-center des:text-left px-gutter sm:px-0
         '>
-					<div>
+					<div className='relative z-2'>
 						<h2 className='text-peach text-40 font-medium'>World-class talent</h2>
 						<p
 							className='pt-[max(1.5rem,20px)] text-16 leading-[1.6]
