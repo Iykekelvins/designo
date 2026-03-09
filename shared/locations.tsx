@@ -51,7 +51,7 @@ export default function Locations({ page }: { page: 'ab' | 'c' }) {
 				fill='none'
 				xmlns='http://www.w3.org/2000/svg'
 				className={`absolute w-251.5 h-148.5 hidden des:block z-[-1]
-        ${page === 'ab' ? '-right-140 -bottom-100' : ''}
+        ${page === 'ab' ? '-right-140 -bottom-100' : '-bottom-80 -right-44'}
         `}>
 				<path
 					opacity='0.502255'

@@ -1,14 +1,21 @@
+'use client';
+
 import { footer_icons } from '@/components/icons';
 import { NAVLINKS } from '@/lib/mock';
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Footer() {
+	const pathname = usePathname();
+
 	return (
 		<footer
-			className='bg-black sm:pt-[max(9rem,144px)] sm:-mt-[max(4rem,64px)] 
-			 pb-[max(4.5rem,72px)] -mt-[max(11.375rem,182px)] pt-[max(15.625rem,250px)]'>
+			className={`bg-black sm:pt-[max(9rem,144px)]  
+			 pb-[max(4.5rem,72px)] pt-[max(15.625rem,250px)]
+			 ${pathname !== '/contact' ? 'sm:-mt-[max(4rem,64px)] -mt-[max(11.375rem,182px)]' : ''}
+			 `}>
 			<div className='ac'>
 				<div
 					className='flex items-center justify-between
