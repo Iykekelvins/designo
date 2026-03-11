@@ -64,7 +64,7 @@ export default function Hero() {
 						duration: 0.45,
 						stagger: 0.1,
 					},
-					'-=0.8',
+					'-=1.2',
 				)
 				.to(
 					image.current,
@@ -73,7 +73,7 @@ export default function Hero() {
 						opacity: 1,
 						ease: 'none',
 					},
-					'-=0.75',
+					'<',
 				)
 				.to(
 					link.current,
@@ -82,7 +82,7 @@ export default function Hero() {
 						opacity: 1,
 						ease: 'none',
 					},
-					'-=0.75',
+					'<',
 				);
 		},
 		{
