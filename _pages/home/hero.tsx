@@ -2,12 +2,11 @@
 
 import { useEffect, useRef } from 'react';
 import { useGSAP } from '@gsap/react';
-import { SplitText } from 'gsap/SplitText';
+import { gsap, SplitText } from '@/lib/gsap';
 
 import Button from '@/components/button';
 import Image from 'next/image';
 import Link from 'next/link';
-import gsap from 'gsap';
 
 export default function Hero() {
 	const hero = useRef<HTMLElement>(null);
