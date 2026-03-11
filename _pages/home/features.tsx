@@ -36,12 +36,13 @@ export default function Features() {
 			mm.add('(min-width: 1200px)', () => {
 				ScrollTrigger.create({
 					trigger: featuresContainer.current,
-					start: 'top 60%',
+					start: 'top 80%',
 					onEnter: () => {
 						gsap.to("[data-selector='feature']", {
 							y: 0,
 							opacity: 1,
 							stagger: 0.05,
+							duration: 0.75,
 						});
 					},
 				});
@@ -56,7 +57,7 @@ export default function Features() {
 							gsap.to(feature, {
 								y: 0,
 								opacity: 1,
-								stagger: 0.05,
+								duration: 0.75,
 							});
 						},
 					});

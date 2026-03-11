@@ -5,6 +5,7 @@ import { Lenis } from 'lenis/react';
 import Navbar from '@/shared/navbar';
 import LetsTalk from '@/shared/lets-talk';
 import Footer from '@/shared/footer';
+import ScrollWrapper from '@/shared/scroll-wrapper';
 
 import './globals.css';
 
@@ -31,16 +32,18 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<Lenis root>
-				<body className={`${jost.variable} antialiased`}>
-					<Navbar />
-					<main className='ac'>
-						{children}
-						<LetsTalk />
-					</main>
-					<Footer />
-				</body>
-			</Lenis>
+			<ScrollWrapper>
+				<Lenis root>
+					<body className={`${jost.variable} antialiased`}>
+						<Navbar />
+						<main className='ac'>
+							{children}
+							<LetsTalk />
+						</main>
+						<Footer />
+					</body>
+				</Lenis>
+			</ScrollWrapper>
 		</html>
 	);
 }

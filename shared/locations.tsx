@@ -1,6 +1,14 @@
+'use client';
+
+import { useGSAP } from '@gsap/react';
+import { useRef } from 'react';
+import { gsap, ScrollTrigger } from '@/lib/gsap';
+
 import Button from '@/components/button';
 import Image from 'next/image';
 import Link from 'next/link';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Locations({ page }: { page: 'ab' | 'c' }) {
 	const locations = [
@@ -21,11 +29,58 @@ export default function Locations({ page }: { page: 'ab' | 'c' }) {
 		},
 	];
 
+	const locationsContainer = useRef<HTMLUListElement>(null);
+
+	useGSAP(
+		() => {
+			const mm = gsap.matchMedia();
+
+			mm.add('(min-width: 1200px)', () => {
+				ScrollTrigger.create({
+					trigger: locationsContainer.current,
+					start: 'top 80%',
+					onEnter: () => {
+						gsap.to("[data-selector='location']", {
+							y: 0,
+							opacity: 1,
+							stagger: 0.05,
+							duration: 0.75,
+						});
+					},
+				});
+			});
+
+			mm.add('(max-width: 1199px)', () => {
+				document
+					.querySelectorAll("[data-selector='location']")
+					.forEach((location) => {
+						ScrollTrigger.create({
+							trigger: location,
+							start: 'top 85%',
+							onEnter: () => {
+								gsap.to(location, {
+									y: 0,
+									opacity: 1,
+									duration: 0.75,
+								});
+							},
+						});
+					});
+			});
+		},
+		{ scope: locationsContainer },
+	);
+
 	return (
 		<section className='pt-[max(10rem,120px)] relative'>
-			<ul className='grid des:grid-cols-3 gap-[max(5rem,80px)] des:gap-0'>
+			<ul
+				className='grid des:grid-cols-3 gap-[max(5rem,80px)] des:gap-0'
+				ref={locationsContainer}>
 				{locations.map((loc) => (
-					<li key={loc.name} className='flex flex-col items-center'>
+					<li
+						key={loc.name}
+						className='flex flex-col items-center translate-y-[25%] opacity-0'
+						data-selector='location'>
 						<Image
 							src={loc.img}
 							width={202}

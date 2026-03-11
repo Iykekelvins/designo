@@ -1,4 +1,6 @@
+import Words from '@/components/words';
 import Form from './form';
+import Paragraph from '@/components/paragraph';
 
 export default function Hero() {
 	return (
@@ -13,8 +15,10 @@ export default function Hero() {
 			sm:items-start des:items-center
 			'>
 				<div className='text-white text-center sm:text-left relative z-2'>
-					<h1 className='text-48 font-medium'>Contact Us</h1>
-					<p
+					<Words as='h1' className='text-48 font-medium'>
+						Contact Us
+					</Words>
+					<Paragraph
 						className='text-16 leading-[1.6] mt-[max(2rem,24px)]
             des:max-w-[max(25.813rem,420px)]
             '>
@@ -22,7 +26,7 @@ export default function Hero() {
 						and find out how we can help your business grow. If you are looking for
 						unique digital experiences that’s relatable to your users, drop us a
 						line.
-					</p>
+					</Paragraph>
 				</div>
 				<Form />
 			</div>

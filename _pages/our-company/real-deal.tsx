@@ -1,3 +1,5 @@
+import Paragraph from '@/components/paragraph';
+import Words from '@/components/words';
 import Image from 'next/image';
 
 export default function RealDeal() {
@@ -12,8 +14,8 @@ export default function RealDeal() {
         text-center des:text-left px-gutter sm:px-0
         '>
 					<div className='relative z-2'>
-						<h2 className='text-peach text-40 font-medium'>The real deal</h2>
-						<p
+						<Words className='text-peach text-40 font-medium'>The real deal</Words>
+						<Paragraph
 							className='pt-[max(1.5rem,20px)] text-16 leading-[1.6]
               max-w-[max(27.813rem,445px)] sm:max-w-[max(572px)]
               des:max-w-[max(27.813rem,445px)]
@@ -23,10 +25,16 @@ export default function RealDeal() {
 							collaboration, and we strive to bring a fresh perspective to every
 							opportunity. We make design and technology more accessible and give you
 							tools to measure success.
-							<br /> <br /> We are visual storytellers in appealing and captivating
-							ways. By combining business and marketing strategies, we inspire
-							audiences to take action and drive real results.
-						</p>
+						</Paragraph>
+						<Paragraph
+							className='pt-[max(1.5rem,20px)] text-16 leading-[1.6]
+              max-w-[max(27.813rem,445px)] sm:max-w-[max(572px)]
+              des:max-w-[max(27.813rem,445px)]
+              '>
+							We are visual storytellers in appealing and captivating ways. By
+							combining business and marketing strategies, we inspire audiences to
+							take action and drive real results.
+						</Paragraph>
 					</div>
 					<svg
 						width='584'

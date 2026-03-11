@@ -1,3 +1,5 @@
+import Paragraph from '@/components/paragraph';
+import Words from '@/components/words';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -22,12 +24,12 @@ export default function Projects() {
           	hover:bg-peach/80 overflow-hidden transition-all duration-500 
           	ease-in-out
           	'>
-						<h2 className='text-40 font-medium'>WEB DESIGN</h2>
+						<Words className='text-40 font-medium'>WEB DESIGN</Words>
 						<span
 							className='flex items-center gap-[max(1.25rem,20px)]
             mt-[max(1.5rem,12px)] font-medium text-15 tracking-[5px]
             '>
-							VIEW PROJECTS{' '}
+							<Paragraph as='span'>VIEW PROJECTS</Paragraph>{' '}
 							<svg
 								width='5'
 								height='10'
@@ -62,12 +64,12 @@ export default function Projects() {
           		hover:bg-peach/80 overflow-hidden transition-all duration-500 
           		ease-in-out
           		'>
-							<h2 className='text-40 font-medium'>APP DESIGN</h2>
-							<span
+							<Words className='text-40 font-medium'>APP DESIGN</Words>
+							<p
 								className='flex items-center gap-[max(1.25rem,20px)]
-            mt-[max(1.5rem,12px)] font-medium text-15 tracking-[5px]
-            '>
-								VIEW PROJECTS{' '}
+            		mt-[max(1.5rem,12px)] font-medium text-15 tracking-[5px]
+            		'>
+								<Paragraph as='span'>VIEW PROJECTS</Paragraph>{' '}
 								<svg
 									width='5'
 									height='10'
@@ -81,7 +83,7 @@ export default function Projects() {
 										strokeWidth='2'
 									/>
 								</svg>
-							</span>
+							</p>
 						</Link>
 					</figure>
 					<figure
@@ -101,11 +103,11 @@ export default function Projects() {
           		ease-in-out
           		'>
 							<h2 className='text-40 font-medium uppercase'>graphic DESIGN</h2>
-							<span
+							<p
 								className='flex items-center gap-[max(1.25rem,20px)]
             		mt-[max(1.5rem,12px)] font-medium text-15 tracking-[5px]
             		'>
-								VIEW PROJECTS{' '}
+								<Paragraph as='span'>VIEW PROJECTS</Paragraph>{' '}
 								<svg
 									width='5'
 									height='10'
@@ -119,7 +121,7 @@ export default function Projects() {
 										strokeWidth='2'
 									/>
 								</svg>
-							</span>
+							</p>
 						</Link>
 					</figure>
 				</div>

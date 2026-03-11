@@ -1,3 +1,5 @@
+import Paragraph from '@/components/paragraph';
+import Words from '@/components/words';
 import Image from 'next/image';
 
 export default function WorldClassTalent() {
@@ -36,8 +38,10 @@ export default function WorldClassTalent() {
         text-center des:text-left px-gutter sm:px-0
         '>
 					<div className='relative z-2'>
-						<h2 className='text-peach text-40 font-medium'>World-class talent</h2>
-						<p
+						<Words className='text-peach text-40 font-medium'>
+							World-class talent
+						</Words>
+						<Paragraph
 							className='pt-[max(1.5rem,20px)] text-16 leading-[1.6]
               max-w-[max(27.813rem,445px)] sm:max-w-[max(572px)]
 							des:max-w-[max(27.813rem,445px)]
@@ -45,13 +49,19 @@ export default function WorldClassTalent() {
 							We are a crew of strategists, problem-solvers, and technologists. Every
 							design is thoughtfully crafted from concept to launch, ensuring success
 							in its given market. We are constantly updating our skills in a myriad
-							of platforms. <br /> <br /> Our team is multi-disciplinary and we are
-							not merely interested in form — content and meaning are just as
-							important. We give great importance to craftsmanship, service, and
-							prompt delivery. Clients have always been impressed with our
-							high-quality outcomes that encapsulates their brand’s story and
-							mission.
-						</p>
+							of platforms.
+						</Paragraph>
+						<Paragraph
+							className='pt-[max(1.5rem,20px)] text-16 leading-[1.6]
+              max-w-[max(27.813rem,445px)] sm:max-w-[max(572px)]
+							des:max-w-[max(27.813rem,445px)]
+              '>
+							Our team is multi-disciplinary and we are not merely interested in form
+							— content and meaning are just as important. We give great importance
+							to craftsmanship, service, and prompt delivery. Clients have always
+							been impressed with our high-quality outcomes that encapsulates their
+							brand’s story and mission.
+						</Paragraph>
 					</div>
 					<svg
 						width='584'

@@ -1,3 +1,6 @@
+import Paragraph from '@/components/paragraph';
+import Words from '@/components/words';
+
 export default function Hero({ project }: { project: SingleProjectProps }) {
 	return (
 		<section
@@ -7,10 +10,12 @@ export default function Hero({ project }: { project: SingleProjectProps }) {
   	text-white gap-gutter max-sm:-mx-gutter relative
 		bg-[url(/images/project-hero-bg-mobile.png)] py-[max(105px)]
   		'>
-			<h1 className='text-48 font-medium'>{project.name}</h1>
-			<p className='text-16 leading-[1.6] max-w-[max(25rem,400px)]'>
+			<Words as='h1' className='text-48 font-medium'>
+				{project.name}
+			</Words>
+			<Paragraph className='text-16 leading-[1.6] max-w-[max(25rem,400px)]'>
 				{project.description}
-			</p>
+			</Paragraph>
 			<svg
 				width='1006'
 				height='594'

@@ -4,6 +4,8 @@ import { usePathname } from 'next/navigation';
 
 import Button from '@/components/button';
 import Link from 'next/link';
+import Words from '@/components/words';
+import Paragraph from '@/components/paragraph';
 
 export default function LetsTalk() {
 	const pathname = usePathname();
@@ -23,17 +25,17 @@ export default function LetsTalk() {
       flex-col text-center des:flex-row des:text-left
       '>
 				<div className='text-white'>
-					<h2 className='text-40 font-medium leading-none'>
+					<Words className='text-40 font-medium leading-none'>
 						Let’s talk about <br /> your project
-					</h2>
-					<p
+					</Words>
+					<Paragraph
 						className='text-16 leading-[1.6] mt-[max(1rem,16px)]
             max-w-[max(27.6875rem,280px)] sm:max-w-140
             des:max-w-[max(27.6875rem,280px)]
             '>
 						Ready to take it to the next level? Contact us today and find out how our
 						expertise can help your business grow.
-					</p>
+					</Paragraph>
 				</div>
 
 				<Link href='/contact'>

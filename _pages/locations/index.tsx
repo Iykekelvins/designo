@@ -6,6 +6,8 @@ import { useSearchParams } from 'next/navigation';
 
 import Link from 'next/link';
 import Image from 'next/image';
+import Words from '@/components/words';
+import Paragraph from '@/components/paragraph';
 
 export default function Locations() {
 	const locations = [
@@ -65,28 +67,33 @@ export default function Locations() {
               bg-cover sm:bg-contain w-full des:w-max
               '>
 							<div className='sm:min-w-[max(33.75rem,540px)]'>
-								<h2 className='text-40 font-medium text-peach text-center sm:text-left'>
+								<Words className='text-40 font-medium text-peach text-center sm:text-left'>
 									{loc.name}
-								</h2>
+								</Words>
 								<div
 									className='grid sm:grid-cols-2 mt-gutter text-center 
                 sm:text-left gap-gutter sm:gap-0'>
 									<div className='text-16 leading-[1.6]'>
-										<h3 className='font-bold'>{loc.location}</h3>
-										<p dangerouslySetInnerHTML={{ __html: loc.address }}></p>
+										<Words as='h3' className='font-bold'>
+											{loc.location}
+										</Words>
+										<Paragraph
+											dangerouslySetInnerHTML={{ __html: loc.address }}></Paragraph>
 									</div>
 									<div className='text-16 leading-[1.6]'>
-										<h3 className='font-bold'>Contact</h3>
-										<p>
+										<Words as='h3' className='font-bold'>
+											Contact
+										</Words>
+										<Paragraph>
 											P:{' '}
 											<Link
 												href={`tel:${loc.phone.replaceAll(' ', '-').replaceAll('-', '')}`}>
 												{loc.phone}
 											</Link>
-										</p>
-										<p>
+										</Paragraph>
+										<Paragraph>
 											M: <Link href={`mailto:${loc.email}`}>{loc.email}</Link>
-										</p>
+										</Paragraph>
 									</div>
 								</div>
 							</div>

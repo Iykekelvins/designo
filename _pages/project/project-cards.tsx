@@ -1,9 +1,59 @@
+'use client';
+
+import { useGSAP } from '@gsap/react';
+import { useRef } from 'react';
+import { gsap, ScrollTrigger } from '@/lib/gsap';
+
 import Image from 'next/image';
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function ProjectCards({ project }: { project: SingleProjectProps }) {
+	const projectsContainer = useRef<HTMLUListElement>(null);
+
+	useGSAP(
+		() => {
+			const mm = gsap.matchMedia();
+
+			mm.add('(min-width: 1200px)', () => {
+				ScrollTrigger.create({
+					trigger: projectsContainer.current,
+					start: 'top 80%',
+					onEnter: () => {
+						gsap.to("[data-selector='project']", {
+							y: 0,
+							opacity: 1,
+							stagger: 0.05,
+							duration: 0.75,
+						});
+					},
+				});
+			});
+
+			mm.add('(max-width: 1199px)', () => {
+				document.querySelectorAll("[data-selector='project']").forEach((project) => {
+					ScrollTrigger.create({
+						trigger: project,
+						start: 'top 85%',
+						onEnter: () => {
+							gsap.to(project, {
+								y: 0,
+								opacity: 1,
+								duration: 0.75,
+							});
+						},
+					});
+				});
+			});
+		},
+		{ scope: projectsContainer },
+	);
+
 	return (
 		<section className='pt-[max(10rem,96px)]'>
-			<ul className='grid des:grid-cols-3 gap-[max(1.875rem,30px)]'>
+			<ul
+				className='grid des:grid-cols-3 gap-[max(1.875rem,30px)]'
+				ref={projectsContainer}>
 				{project.items.map((item) => (
 					<li
 						key={item.name}
@@ -11,7 +61,9 @@ export default function ProjectCards({ project }: { project: SingleProjectProps 
             hover:bg-peach transition-colors duration-500 
             ease-in-out cursor-pointer hover:[&_p]:text-white
             hover:[&_h3]:text-white grid sm:grid-cols-2 des:grid-cols-1
-            '>
+						translate-y-[25%] opacity-0
+            '
+						data-selector='project'>
 						<Image
 							src={item.img}
 							width={350}
