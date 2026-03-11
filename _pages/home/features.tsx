@@ -1,3 +1,9 @@
+'use client';
+
+import { useGSAP } from '@gsap/react';
+import { useRef } from 'react';
+import { gsap, ScrollTrigger } from '@/lib/gsap';
+
 import Image from 'next/image';
 
 const features = [
@@ -18,18 +24,61 @@ const features = [
 	},
 ];
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Features() {
+	const featuresContainer = useRef<HTMLUListElement>(null);
+
+	useGSAP(
+		() => {
+			const mm = gsap.matchMedia();
+
+			mm.add('(min-width: 1200px)', () => {
+				ScrollTrigger.create({
+					trigger: featuresContainer.current,
+					start: 'top 60%',
+					onEnter: () => {
+						gsap.to("[data-selector='feature']", {
+							y: 0,
+							opacity: 1,
+							stagger: 0.05,
+						});
+					},
+				});
+			});
+
+			mm.add('(max-width: 1199px)', () => {
+				document.querySelectorAll("[data-selector='feature']").forEach((feature) => {
+					ScrollTrigger.create({
+						trigger: feature,
+						start: 'top 85%',
+						onEnter: () => {
+							gsap.to(feature, {
+								y: 0,
+								opacity: 1,
+								stagger: 0.05,
+							});
+						},
+					});
+				});
+			});
+		},
+		{ scope: featuresContainer },
+	);
+
 	return (
 		<section className='pt-[max(10rem,120px)] relative'>
 			<ul
 				className='grid des:grid-cols-3 gap-x-[max(1.875rem,30px)]
         gap-y-[max(2rem,32px)]
-        '>
+        '
+				ref={featuresContainer}>
 				{features.map((feature, i) => (
 					<li
 						key={i}
 						className='flex flex-col sm:flex-row des:flex-col 
-            items-center gap-[max(3rem,48px)]'>
+            items-center gap-[max(3rem,48px)] translate-y-[25%] opacity-0'
+						data-selector='feature'>
 						<Image
 							src={feature.img}
 							width={202}
