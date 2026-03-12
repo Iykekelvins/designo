@@ -38,9 +38,7 @@ export default function Navbar() {
 				<nav>
 					<div className='ac'>
 						<div className='flex items-center justify-between'>
-							<Link href='/'
-							onClick={()=>setOpenMenu(false)}
-							>
+							<Link href='/' onClick={() => setOpenMenu(false)}>
 								<Image
 									src='/nav-logo.svg'
 									alt='Designo Logo'
@@ -62,7 +60,8 @@ export default function Navbar() {
 							</ul>
 							<button
 								className='sm:hidden grid gap-[max(4px,0.25rem)]'
-								onClick={() => setOpenMenu(!openMenu)}>
+								onClick={() => setOpenMenu(!openMenu)}
+								aria-label='toggle-menu'>
 								<span
 									className='w-gutter min-h-[max(4px,0.25rem)] bg-[#1D1C1E] inline-block'
 									data-selector='line-1'

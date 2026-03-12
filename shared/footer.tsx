@@ -90,7 +90,8 @@ export default function Footer() {
 									href='#'
 									className='[&_svg_path]:transition-colors [&_svg_path]:duration-500
 								[&_svg_path]:ease-in-out hover:[&_svg_path]:fill-light-peach
-								'>
+								'
+									aria-label='social icon'>
 									<Icon />
 								</Link>
 							</li>
