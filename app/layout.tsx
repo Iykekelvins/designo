@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Jost } from 'next/font/google';
 import { Lenis } from 'lenis/react';
+import { metaDataOptions, url } from '@/lib/metadata';
 
 import Navbar from '@/shared/navbar';
 import LetsTalk from '@/shared/lets-talk';
@@ -16,6 +17,8 @@ export const metadata: Metadata = {
 	},
 	description:
 		'Designo is a digital creative agency that provides a wide range of services, including web design, app development, and digital marketing. We are passionate about creating beautiful and functional digital experiences that help our clients achieve their goals.',
+	metadataBase: new URL(url),
+	...metaDataOptions,
 };
 
 const jost = Jost({
